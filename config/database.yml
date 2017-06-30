@@ -48,7 +48,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: koyomi-toys_production
-  username: koyomi-toys
-  password: <%= ENV['KOYOMI-TOYS_DATABASE_PASSWORD'] %>
+  &lt;&lt;: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
