@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
+  database: koyomi-toys_production
+  username: koyomi-toys
+  password: <%= ENV['KOYOMI-TOYS_DATABASE_PASSWORD'] %>
