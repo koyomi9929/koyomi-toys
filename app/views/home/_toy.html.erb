@@ -1,0 +1,10 @@
+<div class="col-sm-6 col-md-4">
+  <div class="thumbnail">
+    <img src="http://xn--t8jwa3kr22l8k6b9v2a.com/wp-content/uploads/2015/12/%E5%A4%9A%E9%83%A8%E6%9C%AA%E8%8F%AF%E5%AD%90%EF%BC%90%EF%BC%97.bmp" alt="...">
+    <div class="caption">
+      <h3><%= if toy.name.blank? then "no name" else toy.name end %></h3>
+      <p><%= if toy.detail.blank? then "no detail" else toy.detail end %></p>
+      <p><a href="<%= toy.path %>" class="btn btn-primary" role="button">Open</a> <a href="<%= toy.path %>/show" class="btn btn-default" role="button">Detail</a></p>
+    </div>
+  </div>
+</div>
