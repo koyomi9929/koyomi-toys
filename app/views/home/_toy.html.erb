@@ -1,0 +1,12 @@
+<div class="col-sm-6 col-md-4">
+  <div class="thumbnail">
+    <div class="img-container--table-cell">
+      <img src="<%= toy.image %>" alt="...">
+    </div>
+    <div class="caption">
+      <h3><%= if toy.name.blank? then "no name" else toy.name end %></h3>
+      <p><%= if toy.detail.blank? then "no detail" else toy.detail end %></p>
+      <p><a href="<%= toy.path %>" class="btn btn-primary" role="button">Open</a> <a href="<%= toy.path %>/show" class="btn btn-default" role="button">Detail</a></p>
+    </div>
+  </div>
+</div>
