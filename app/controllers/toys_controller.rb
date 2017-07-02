@@ -1,4 +1,5 @@
 class ToysController < ApplicationController
+  before_action :authenticate_user!, only: :new
   def new
     @toy = Toy.new
   end
@@ -14,6 +15,6 @@ class ToysController < ApplicationController
   private
 
   def toy_parameter
-    params.require(:toy).permit(:name, :genre)
+    params.require(:toy).permit(:name, :genre, :detail, :path, :image)
   end
 end

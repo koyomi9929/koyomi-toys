@@ -1,11 +1,9 @@
+<h1>こよみの遊び場</h1>
+<div class="row">
+  <% @toys.each do |toy| %>
+     <%= render partial: 'home/toy', locals: { toy: toy } %>
+  <% end %>
 
-<div class="jumbotron">
-  <div class="container">
-    <h1>こよみの遊び場</h1>
-    <div class="row">
-      <% @toys.each do |toy| %>
-         <%= render partial: 'home/toy', locals: { toy: toy } %>
-      <% end %>
-    </div>
-  </div>
+  <%= link_to "サインアウト", destroy_user_session_path, method: :delete %>
+  <%= link_to "サインイン", new_user_session_path, method: :get %>
 </div>
