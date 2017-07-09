@@ -1,9 +1,11 @@
-<h1>こよみの遊び場</h1>
+<h1>遊び場</h1>
+<br>
+<br>
 <div class="row">
   <% @toys.each do |toy| %>
      <%= render partial: 'home/toy', locals: { toy: toy } %>
   <% end %>
 
-  <%= link_to "サインアウト", destroy_user_session_path, method: :delete %>
-  <%= link_to "サインイン", new_user_session_path, method: :get %>
 </div>
+<%= link_to "サインアウト", destroy_user_session_path, method: :delete, class: "btn btn-default" %>
+<%= link_to "サインイン", new_user_session_path, method: :get, class: "btn btn-default" %>
